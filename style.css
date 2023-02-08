@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    --darkBG: rgb(236, 243, 246);
+    --txtColor: rgb(78, 124, 131);
+    --lineColor: rgb(204, 204, 204);
+    transition: 300ms;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: azure;
+}
+
+.cardGroup{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 7px;
+    overflow: hidden;
+    min-height: fit-content;
+    border: 0.5px solid var(--lineColor);
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.2));
+}
+.card{
+    width: 300px;
+    color: var(--txtColor);
+    margin: 0;
+    border: 0.5px solid var(--lineColor);
+    background-color: white;
+}
+.card__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+.card__description:hover .icon{
+    opacity: 1;
+    transform: scale(2.5);
+}
+.icon{
+    transform: scale(2.2);
+    margin: 20px;
+    opacity: 0.3;
+}
+.card__price{
+    background-color: var(--darkBG);
+    line-height: 2.3rem;
+    font-weight: 900;
+    border-top: 1px solid var(--lineColor);
+}
+
+@media (max-width:920px) {
+    .cardGroup{
+        width: min-content;
+    }
+}
